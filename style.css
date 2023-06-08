@@ -113,7 +113,7 @@ nav ul li a:hover::before {
 }
 
 .button{
-    background-color: #000000;
+    background-color: #3f3cf8;
     color: #ffffff;
     border: none;
     border-radius: 20px;
@@ -140,8 +140,8 @@ nav ul li a:hover::before {
     padding: 40px;
     border-radius: 10px;
     text-align: center;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 10vh;
+    margin-right: 10vh;
     margin-bottom: 20px;
     margin-top: 20px;
     display: flex; 
@@ -156,10 +156,7 @@ nav ul li a:hover::before {
     margin-bottom: 10px;
 }
 
-.scroll-content p {
-    padding-left: 200px;
-    padding-right: 200px;
-}
+
 
 
 
@@ -171,7 +168,6 @@ nav ul li a:hover::before {
 
 .scroll-content p {
     color: #ffffff;
-    margin-bottom: 20px;
 }
 
 .parallax {
@@ -189,7 +185,7 @@ nav ul li a:hover::before {
 }
 
 .buttonBurrito{
-    background-color: #000000;
+    background-color: #3f3cf8;
     color: #ffffff;
     border: none;
     border-radius: 20px;
