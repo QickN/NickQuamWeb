@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(-40deg, #385bf5, #9b38e2, #0f2ac5);
+    background-size: 800% 800%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+header {
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 1000;
+    animation: bounceDown .5s ease;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 20px;
+}
+
+nav ul li a {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: -5px; 
+    left: -5px;
+    right: -5px; 
+    bottom: -5px; 
+    border-radius: 20px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    z-index: -1;
+}
+
+nav ul li a:hover::before {
+    background-color: #000000;
+}
+
+.middle {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.scroll-content {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px;
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+}
+
+
+
+.middle h1 {
+    font-size: 50px;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease;
+}
+
+.middle h2 {
+    font-weight: lighter;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease;
+}
+
+.button{
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    border-bottom: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+  
+  
+
+.scroll-content {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(25, 25, 25, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+}
+
+.scroll-content h2 {
+    margin-bottom: 10px;
+}
+
+.scroll-content p {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+
+
+.scroll-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.scroll-content p {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateZ(0);
+    background-attachment: fixed;
+}
+
+.buttonBurrito{
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    border-bottom: none;
+    transition: background-color 0.3s ease;
+}
+
+.buttonBurrito:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes parallaxAnimation {
+    0% {
+        transform: translateZ(0);
+    }
+    100% {
+        transform: translateZ(-500px);
+    }
+}
+
+@keyframes parallaxAnimationReverse {
+    0% {
+        transform: translateZ(-500px);
+    }
+    100% {
+        transform: translateZ(0);
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+@keyframes slowlyMove {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-300px);
+        transform: translateX(400px);
+    }
+    100% {
+        transform: translateY(300px);
+        transform: translateX(-400px);
+    }
+}
+
+@keyframes slowlyMove2 {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-00px);
+        transform: translateX(-400px);
+    }
+    100% {
+        transform: translateY(-300px);
+        transform: translateX(400px);
+    }
+}
+
+@keyframes extend {
+    0% {
+        width: 100px;
+    }
+    50% {
+        width: 200px;
+    }
+    100% {
+        width: 100px;
+    }
+}
+
+@keyframes bounceUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes bounceUp2 {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    10% {
+        opacity: .25;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes bounceDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes bounceDown2 {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    10% {
+        opacity: .25;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes bounceDown3 {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    20% {
+        opacity: .25;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

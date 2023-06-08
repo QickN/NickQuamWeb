@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Nicholas Quam | Porfolio</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;600&amp;display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="assets/shipV1.ico">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo-wrapper">
+                <a href="#" class="logo">NQ</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/nicholasquam" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://www.github.com/qickn" target="_blank">GitHub</a></li> 
+                </ul>
+            </nav>
+        </header>
+
+        <section class="middle">
+            <div class="glass-effect">
+                <h1>Nicholas Quam</h1>
+                <h2>Portfolio</h2>
+                <button id="scrollButton" type="button" class="button">My Work</button>
+            </div>
+        </section>
+        <div class="scroll-content" id="scrolling">
+            <h2>NBA Finals Burrito Code Script</h2>
+            <p>
+                During the 2023 NBA Finals, Chipotle was running a promotion where everytime a 3-pointer was made, they would give out free burritos.
+                They would do this by posting a picture of the code on twitter with some text. This script takes a screenshot while the page is reloading
+                then uses a screen reader to read the text, then the text is parsed to find the code. The code is then copied to the clipboard and then
+                it runs a shortcut on the hosts machine to send the code to a phone number.
+            </p>
+            <img src="images/image1.png" alt="Image 1">
+            <a href="https://github.com/QickN/CFinalsBot " target="_blank">
+            <button type="button" class="buttonBurrito">View on GitHub</button>
+            </a>
+        </div>
+
+        <div class="scroll-content">
+            <h2>Working on it...</h2>
+            <p></p>
+            <img src="image2.jpg" alt="Image 2">
+        </div>
+
+        <div class="parallax parallax-1"></div>
+
+        <div class="scroll-content">
+            <h2>Working on it...</h2>
+            <p></p>
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+
+        <div class="parallax parallax-2"></div>
+
+        <div class="scroll-content">
+            <h2>Working on it...</h2>
+            <p></p>
+            <img src="image4.jpg" alt="Image 4">
+        </div>
+        <script>
+            const scrollButton = document.getElementById('scrollButton');
+            const section = document.getElementById('scrolling');
+
+            scrollButton.addEventListener('click', () => {
+                const sectionPosition = section.offsetTop;
+                const scrollOffset = sectionPosition - 400;
+                window.scrollTo({
+                    top: scrollOffset,
+                    behavior: 'smooth',
+                });
+            });
+        </script>
+
+        <script>
+            const scrollContents = document.querySelectorAll('.scroll-content');
+            let scrollOffset = 0;
+
+            window.addEventListener('scroll', () => {
+                scrollOffset = window.pageYOffset;
+                scrollContents.forEach((content) => {
+                    const translate = scrollOffset * 0.4; // Adjust the parallax effect intensity
+                    content.style.transform = `translateY(-${translate}px)`;
+                });
+            });
+        </script>
+    </body>
+</html>
