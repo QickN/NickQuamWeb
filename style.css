@@ -152,6 +152,7 @@ nav ul li a:hover::before {
 }
 
 .scroll-content h2 {
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
