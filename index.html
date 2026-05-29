@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nick Quam | Software Founder</title>
+    <title>Nick Quam | Founder & Product Engineer</title>
     <meta
       name="description"
-      content="Nick Quam is the founder and engineer behind Astretto and Checkout, a native iPhone grocery rankings app."
+      content="Nick Quam is the founder and product engineer behind Astretto and Checkout, a native iPhone grocery rankings app."
     />
     <meta name="theme-color" content="#05070c" />
-    <meta property="og:title" content="Nick Quam | Software Founder" />
+    <meta property="og:title" content="Nick Quam | Founder & Product Engineer" />
     <meta
       property="og:description"
       content="Founder and engineer behind Astretto and Checkout."
@@ -145,6 +145,11 @@
         display: flex;
         align-items: center;
         gap: 8px;
+        scrollbar-width: none;
+      }
+
+      .nav-links::-webkit-scrollbar {
+        display: none;
       }
 
       .nav-links a {
@@ -210,6 +215,24 @@
         font-weight: 680;
         letter-spacing: -0.055em;
         line-height: 1.02;
+      }
+
+      .title-reveal {
+        display: block;
+      }
+
+      .title-line {
+        display: block;
+        overflow: hidden;
+        padding-bottom: 0.08em;
+        margin-bottom: -0.08em;
+      }
+
+      .title-line > span {
+        display: block;
+        animation: titleReveal 760ms cubic-bezier(0.16, 1, 0.3, 1) both;
+        animation-delay: var(--title-delay, 0ms);
+        will-change: transform, opacity;
       }
 
       .gradient-text {
@@ -493,6 +516,18 @@
         }
       }
 
+      @keyframes titleReveal {
+        from {
+          opacity: 0;
+          transform: translateY(112%);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
       @keyframes marquee {
         to {
           transform: translateX(-50%);
@@ -602,7 +637,7 @@
           <span class="mark">NQ</span>
           <span class="brand-text">
             <strong>Nick Quam</strong>
-            <span>Software founder</span>
+            <span>Founder & engineer</span>
           </span>
         </a>
         <nav class="nav-links" aria-label="Links">
@@ -620,11 +655,11 @@
               <span class="pulse" aria-hidden="true"></span>
               Astretto / Checkout
             </div>
-            <h1 id="hero-title" class="reveal delay-1">
-              Nick Quam
+            <h1 id="hero-title" class="title-reveal" aria-label="Nick Quam">
+              <span class="title-line"><span style="--title-delay: 80ms">Nick Quam</span></span>
             </h1>
             <p class="hero-copy reveal delay-2">
-              I build polished consumer software through Astretto. Checkout is the first public
+              I build focused consumer software through Astretto. Checkout is the first public
               product: a native iPhone app for grocery rankings, barcode scanning, and better
               decisions in the aisle.
             </p>
@@ -649,7 +684,9 @@
 
         <section id="products" class="section" aria-labelledby="products-title">
           <div class="section-heading">
-            <h2 id="products-title">Products shipping now.</h2>
+            <h2 id="products-title" class="title-reveal" aria-label="Products shipping now.">
+              <span class="title-line"><span>Products shipping now.</span></span>
+            </h2>
             <p>
               One studio, one standard: clear purpose, careful engineering, and interfaces that feel
               ready the first time they open.
@@ -659,7 +696,10 @@
           <div class="products">
             <article class="product-card astretto">
               <p class="product-kicker">Astretto</p>
-              <h3>A focused product studio.</h3>
+              <h3 class="title-reveal" aria-label="Astretto builds polished software.">
+                <span class="title-line"><span>Astretto builds</span></span>
+                <span class="title-line"><span style="--title-delay: 80ms">polished software.</span></span>
+              </h3>
               <p>
                 Astretto is where I build and refine consumer software: thoughtful branding,
                 practical engineering, and products designed to feel finished.
@@ -674,7 +714,10 @@
 
             <article class="product-card checkout">
               <p class="product-kicker">Checkout</p>
-              <h3>Grocery shopping, but smarter.</h3>
+              <h3 class="title-reveal" aria-label="Grocery shopping, but smarter.">
+                <span class="title-line"><span>Grocery shopping,</span></span>
+                <span class="title-line"><span style="--title-delay: 80ms">but smarter.</span></span>
+              </h3>
               <p>
                 Checkout is a native iPhone app and ranking site for finding better grocery-store
                 products before you buy. Search products, scan barcodes, and compare categories.
