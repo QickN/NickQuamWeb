@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nick Quam | Founder & Engineer</title>
+    <title>Nick Quam | Software Founder</title>
     <meta
       name="description"
       content="Nick Quam is the founder and engineer behind Astretto and Checkout, a native iPhone grocery rankings app."
     />
     <meta name="theme-color" content="#05070c" />
-    <meta property="og:title" content="Nick Quam | Founder & Engineer" />
+    <meta property="og:title" content="Nick Quam | Software Founder" />
     <meta
       property="og:description"
       content="Founder and engineer behind Astretto and Checkout."
@@ -602,7 +602,7 @@
           <span class="mark">NQ</span>
           <span class="brand-text">
             <strong>Nick Quam</strong>
-            <span>Founder and engineer</span>
+            <span>Software founder</span>
           </span>
         </a>
         <nav class="nav-links" aria-label="Links">
@@ -618,15 +618,15 @@
           <div class="hero-inner">
             <div class="eyebrow reveal">
               <span class="pulse" aria-hidden="true"></span>
-              Building Astretto and Checkout
+              Astretto / Checkout
             </div>
             <h1 id="hero-title" class="reveal delay-1">
               Nick Quam
             </h1>
             <p class="hero-copy reveal delay-2">
-              Founder of Astretto and builder of Checkout, a native iPhone app for grocery
-              rankings. I build focused consumer software with clean systems, careful interfaces,
-              and a launch-ready level of detail.
+              I build polished consumer software through Astretto. Checkout is the first public
+              product: a native iPhone app for grocery rankings, barcode scanning, and better
+              decisions in the aisle.
             </p>
             <div class="actions reveal delay-3">
               <a class="button primary" href="https://checkoutrankings.com">Open Checkout</a>
@@ -649,10 +649,10 @@
 
         <section id="products" class="section" aria-labelledby="products-title">
           <div class="section-heading">
-            <h2 id="products-title">Current work.</h2>
+            <h2 id="products-title">Products shipping now.</h2>
             <p>
-              Two public surfaces with one standard: clear purpose, clean execution, and a polished
-              user experience.
+              One studio, one standard: clear purpose, careful engineering, and interfaces that feel
+              ready the first time they open.
             </p>
           </div>
 
@@ -691,7 +691,7 @@
       </main>
 
       <footer class="footer">
-        <span>(c) 2026 Nick Quam / Astretto LLC</span>
+        <span>&copy; <span data-current-year>2026</span> Nick Quam / Astretto LLC</span>
         <span class="footer-links">
           <a href="https://github.com/qick">GitHub</a>
           <a href="https://astretto.com">Astretto</a>
@@ -699,5 +699,10 @@
         </span>
       </footer>
     </div>
+    <script>
+      document.querySelectorAll("[data-current-year]").forEach((node) => {
+        node.textContent = new Date().getFullYear();
+      });
+    </script>
   </body>
 </html>
